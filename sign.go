@@ -1,4 +1,4 @@
-package urmclient
+package openclient
 
 import (
 	"time"
@@ -13,7 +13,7 @@ import (
 	appID: 分配的渠道号
 	appSecretKey: 分配的秘钥
 */
-func (urm *URM) genQuery(param map[string]string) string {
+func (cli *Client) genQuery(param map[string]string) string {
 
 	timeUnix := time.Now().Unix()
 
@@ -22,13 +22,13 @@ func (urm *URM) genQuery(param map[string]string) string {
 	signer.SetKeyNameTimestamp("timestamp")
 	signer.SetKeyNameNonceStr("nonce_str")
 
-	signer.SetAppId(urm.AppID)
+	signer.SetAppId(cli.AppID)
 	signer.SetTimeStamp(timeUnix)
 
 	nonce := uuid.NewV4().String()
 	signer.SetNonceStr(nonce)
 
-	signer.SetAppSecretWrapBody(urm.AppSecret)
+	signer.SetAppSecretWrapBody(cli.AppSecret)
 
 	for k, v := range param {
 		signer.AddBody(k, v)
