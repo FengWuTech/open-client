@@ -15,7 +15,7 @@ func New() *Client {
 func TestReportWarning(t *testing.T) {
 
 	param := WarningOptions {
-		CommunityID :"oudianhuayuan",
+		CommunityID :2,
 		ReportType:1,
 		DeviceID:"5309ee0e3fb14296b17d962055c07dcf",
 		AlarmTime:1590646303,

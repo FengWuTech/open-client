@@ -10,7 +10,7 @@ import (
 
 
 type WarningOptions struct {
-	CommunityID string `json:"community_id"  valid:"Required"`  //小区ID
+	CommunityID int `json:"community_id"  valid:"Required"`  //小区ID
 	ReportType int `json:"report_type"  valid:"Required"`  //上报类型 1自动 2手动
 	DeviceID string `json:"device_id"  valid:"Required"`  //设备编号
 	AlarmTime int `json:"alarm_time"  valid:"Required"`  //报警时间,unix时间戳 1590646303
