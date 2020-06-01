@@ -15,11 +15,11 @@ func New() *Client {
 func TestReportWarning(t *testing.T) {
 
 	param := WarningOptions {
-		CommunityID :2,
+		CommunityID :5,//云趣园
 		ReportType:1,
 		DeviceID:"5309ee0e3fb14296b17d962055c07dcf",
 		AlarmTime:1590646303,
-		AlarmPicture:"/images/20200528026243215422184310035.jpeg",
+		AlarmPicture:"https://pms-static.gmtech.top/2020221/1582261785297939325.png",
 		AlarmType:1,
 		AlarmGrade:1,
 		AlarmID:"h3ai34ye",
@@ -40,7 +40,7 @@ func TestReportWarning(t *testing.T) {
 func TestSyncWarningResult(t *testing.T) {
 
 	param := WarningProcessResultOptions {
-		CommunityID :2,
+		CommunityID: 5,//云趣园,
 		DeviceID:"5309ee0e3fb14296b17d962055c07dcf",
 		AlarmID:"h3ai34ye",
 		ProcessName:"张晓华",
